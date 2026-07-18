@@ -2,7 +2,6 @@
 
 A **3-stage agentic AI pipeline** that automates the end-to-end process of identifying, qualifying, and approaching B2B sales leads — from monitoring industry and regulatory signals, to AI-based qualification, to generating and sending targeted outreach content, with no manual step between data collection and send.
 
-> Built for an enterprise client in regulated manufacturing. This is a sanitized, portfolio version — client names, internal infrastructure, credentials, and proprietary scoring rules have been removed or generalized.
 
 ---
 
