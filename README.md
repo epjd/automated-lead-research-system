@@ -3,9 +3,9 @@
  🧭 **Portfolio project by Elijah Peh** — Solutions Engineer / Forward-Deployed Engineer.
  Connect on [LinkedIn](https://www.linkedin.com/in/elijah-peh-3b5bb8ba/).
 
+---
 
 A **3-stage agentic AI pipeline** that automates the end-to-end process of identifying, qualifying, and approaching B2B sales leads - from monitoring industry and regulatory signals, to AI-based qualification, to generating and sending targeted outreach content
-
 
 ---
 
