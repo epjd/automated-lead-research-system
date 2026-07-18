@@ -8,11 +8,11 @@ A **3-stage agentic AI pipeline, built end-to-end on [n8n](https://n8n.io)**, th
 **The hook:** once a company is on the target list, there is **no manual step between data collection and outreach** — scraping, AI qualification, content generation, and send all run hands-off.
 
 **At a glance:** 
-· 3 independent workflows 
-· 15+ monitored data sources 
-· 50+ prospects qualified per run 
-· ~50% less manual BD effort 
-· self-hosted with parallel error monitoring.
+- 3 independent workflows 
+- 15+ monitored data sources 
+- 50+ prospects qualified per run 
+- ~50% less manual BD effort 
+- Self-hosted with parallel error monitoring.
 
 > Built for an enterprise client in regulated manufacturing. This is a sanitized, portfolio version — client names, internal infrastructure, credentials, and proprietary scoring rules have been removed or generalized.
 
