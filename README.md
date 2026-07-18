@@ -38,22 +38,13 @@ flowchart TD
     K --> L[Email Send]
     L --> M[Update Status = Sent]
 
-    classDef trigger fill:#1f6feb,stroke:#0b3a8a,color:#fff;
-    classDef process fill:#0e7490,stroke:#083344,color:#fff;
-    classDef code fill:#7c3aed,stroke:#4c1d95,color:#fff;
-    classDef gate fill:#d97706,stroke:#7c2d12,color:#fff;
-    classDef store fill:#16a34a,stroke:#14532d,color:#fff;
-    classDef stop fill:#dc2626,stroke:#7f1d1d,color:#fff;
-    classDef done fill:#334155,stroke:#0f172a,color:#fff;
+    classDef base fill:#f6f8fa,stroke:#8b949e,color:#1f2328;
+    classDef gate fill:#eaeef2,stroke:#57606a,color:#1f2328,stroke-width:2px;
+    classDef stop fill:#fff,stroke:#8b949e,color:#57606a,stroke-dasharray:4 3;
 
-    class A trigger;
-    class B,C,E process;
-    class D,F code;
+    class A,B,C,D,E,F,I,J,K,L,M base;
     class G gate;
-    class I,K store;
     class H stop;
-    class J,L process;
-    class M done;
 ```
 
 **Mid-stage variation:** runs multiple evaluation agents (one per source) and consolidates them through a unified qualification filter before content generation, with raw data stored per source.
