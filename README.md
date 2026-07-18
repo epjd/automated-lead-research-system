@@ -20,31 +20,41 @@ It's a study in three things I care about as a solutions engineer:
 - **Designed to scale** - a documented roadmap from a built-in datastore to external DBs, semantic dedup, and CRM integration.
 
 ---
-
 ### Common pipeline
 
-```mermaid
-flowchart TD
-    A([Schedule Trigger]) --> B[Lead List<br/>Filter: Status = Active]
-    B --> C[Source Scraping / API Query<br/>web scraping - news · direct API - regulatory]
-    C --> D[HTML Cleaning &amp; Article Extraction<br/>code node]
-    D --> E[Deep Article Extraction<br/>web sources only]
-    E --> F[Deduplication &amp; Token Optimisation<br/>code node]
-    F --> G{AI Evaluation Agent<br/>stage-specific qualify logic}
-    G -->|Disqualified| H([Stop])
-    G -->|Qualified| I[(Research Store)]
-    I --> J[Content Generation AI Agent]
-    J --> K[(Content Store)]
-    K --> L[Email Send]
-    L --> M[Update Status = Sent]
-
-    classDef base fill:#f6f8fa,stroke:#8b949e,color:#1f2328;
-    classDef gate fill:#eaeef2,stroke:#57606a,color:#1f2328,stroke-width:2px;
-    classDef stop fill:#fff,stroke:#8b949e,color:#57606a,stroke-dasharray:4 3;
-
-    class A,B,C,D,E,F,I,J,K,L,M base;
-    class G gate;
-    class H stop;
+```
+[Schedule Trigger]
+        │
+        ▼
+[Lead List] ── Filter: Status = "Active"
+        │
+        ▼
+[Source Scraping / API Query]
+(web scraping for news sources / direct API for regulatory sources)
+        │
+        ▼
+[HTML Cleaning & Article Extraction] ── code node
+        │
+        ▼
+[Deep Article Extraction] ── web sources only
+        │
+        ▼
+[Deduplication & Token Optimisation] ── code node
+        │
+        ▼
+[AI Evaluation Agent] ── stage-specific qualify / disqualify logic
+        │
+        ├── Disqualified → stop
+        └── Qualified →
+                    [Research Store]
+                            │
+                    [Content Generation AI Agent]
+                            │
+                    [Content Store]
+                            │
+                    [Email Send]
+                            │
+                    [Update Status = "Sent"]
 ```
 
 **Mid-stage variation:** runs multiple evaluation agents (one per source) and consolidates them through a unified qualification filter before content generation, with raw data stored per source.
