@@ -1,4 +1,4 @@
-# Automated Lead Signal & Research System on n8n
+# Multi-Agent Lead Signal Pipeline (n8n)
 
 > 🧭 **Portfolio project by Elijah Peh** - Solutions Engineer / Forward-Deployed Engineer.
 > Connect on [LinkedIn](https://www.linkedin.com/in/elijah-peh-3b5bb8ba/).
