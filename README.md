@@ -5,7 +5,7 @@
 
 A **3-stage agentic AI pipeline, built end-to-end on [n8n](https://n8n.io)**, that continuously monitors industry and regulatory sources, uses AI to spot and qualify high-value sales signals, and hands each qualified opportunity to the business's BD team with outreach content already drafted - ready to review, tweak, and send.
 
-**The problem it solves:** the business already has contact details for its target companies. What it *didn't* have was time - someone would otherwise have to manually check dozens of news sources and regulatory databases every day to catch new product launches and filings. This system does that watching automatically, so BD can **get ahead of the curve** and reach out the moment a relevant signal appears.
+**The problem it solves:** the business already has contact details for its target companies. What it *didn't* have was time - someone would otherwise have to manually check dozens of news sources and regulatory databases every day to catch new product launches and filings. This system does that watching automatically, so Business Development (BD) can **get ahead of the curve** and reach out the moment a relevant signal appears.
 
 **Human in the loop by design:** the pipeline automates the tedious part - monitoring, qualification, and drafting - but stops short of contacting anyone. Every qualified lead lands in a BD reviewer's inbox, where a person checks the signal, edits the drafted content, and decides whether to pursue.
 
