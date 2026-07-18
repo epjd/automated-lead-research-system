@@ -31,42 +31,36 @@ Three independent workflows share one architectural pattern but differ in signal
 | **Mid** | Regulatory submissions & technical file activity | Problem-focused | Company PR, regulatory databases (APIs) |
 | **Late** | Active trials & confirmed launch dates | Social proof / commercial | Company PR, industry news publications |
 
-### Common pipeline
+flowchart TD
+    A([Schedule Trigger]) --> B[Lead List<br/>Filter: Status = Active]
+    B --> C[Source Scraping / API Query<br/>web scraping - news · direct API - regulatory]
+    C --> D[HTML Cleaning &amp; Article Extraction<br/>code node]
+    D --> E[Deep Article Extraction<br/>web sources only]
+    E --> F[Deduplication &amp; Token Optimisation<br/>code node]
+    F --> G{AI Evaluation Agent<br/>stage-specific qualify logic}
+    G -->|Disqualified| H([Stop])
+    G -->|Qualified| I[(Research Store)]
+    I --> J[Content Generation AI Agent]
+    J --> K[(Content Store)]
+    K --> L[Email Send]
+    L --> M[Update Status = Sent]
 
-```
-[Schedule Trigger]
-        │
-        ▼
-[Lead List] ── Filter: Status = "Active"
-        │
-        ▼
-[Source Scraping / API Query]
-(web scraping for news sources / direct API for regulatory sources)
-        │
-        ▼
-[HTML Cleaning & Article Extraction] ── code node
-        │
-        ▼
-[Deep Article Extraction] ── web sources only
-        │
-        ▼
-[Deduplication & Token Optimisation] ── code node
-        │
-        ▼
-[AI Evaluation Agent] ── stage-specific qualify / disqualify logic
-        │
-        ├── Disqualified → stop
-        └── Qualified →
-                    [Research Store]
-                            │
-                    [Content Generation AI Agent]
-                            │
-                    [Content Store]
-                            │
-                    [Email Send]
-                            │
-                    [Update Status = "Sent"]
-```
+    classDef trigger fill:#1f6feb,stroke:#0b3a8a,color:#fff;
+    classDef process fill:#0e7490,stroke:#083344,color:#fff;
+    classDef code fill:#7c3aed,stroke:#4c1d95,color:#fff;
+    classDef gate fill:#d97706,stroke:#7c2d12,color:#fff;
+    classDef store fill:#16a34a,stroke:#14532d,color:#fff;
+    classDef stop fill:#dc2626,stroke:#7f1d1d,color:#fff;
+    classDef done fill:#334155,stroke:#0f172a,color:#fff;
+
+    class A trigger;
+    class B,C,E process;
+    class D,F code;
+    class G gate;
+    class I,K store;
+    class H stop;
+    class J,L process;
+    class M done;
 
 **Mid-stage variation:** runs multiple evaluation agents (one per source) and consolidates them through a unified qualification filter before content generation, with raw data stored per source.
 
