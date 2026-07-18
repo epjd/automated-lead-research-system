@@ -1,7 +1,7 @@
 # Multi-Agent Lead Signal Pipeline (n8n)
 
 > 🧭 **Portfolio project by Elijah Peh** - Solutions Engineer / Forward-Deployed Engineer.
-> Connect on [LinkedIn](https://www.linkedin.com/in/elijah-peh-3b5bb8ba/).
+> - Connect on [LinkedIn](https://www.linkedin.com/in/elijah-peh-3b5bb8ba/).
 
 A **3-stage agentic AI pipeline, built end-to-end on [n8n](https://n8n.io)**, that continuously monitors industry and regulatory sources, uses AI to spot and qualify high-value sales signals, and hands each qualified opportunity to the business's BD team with outreach content already drafted - ready to review, tweak, and send.
 
