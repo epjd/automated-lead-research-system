@@ -21,16 +21,9 @@ It's a study in three things I care about as a solutions engineer:
 
 ---
 
-## Architecture
+### Common pipeline
 
-Three independent workflows share one architectural pattern but differ in signal logic, data sources, AI evaluation criteria, and content output.
-
-| Workflow | Stage focus | Signal type | Example sources |
-|---|---|---|---|
-| **Early** | New product launches & announcements | "The Value" | Company PR, industry news publications |
-| **Mid** | Regulatory submissions & technical file activity | Problem-focused | Company PR, regulatory databases (APIs) |
-| **Late** | Active trials & confirmed launch dates | Social proof / commercial | Company PR, industry news publications |
-
+```mermaid
 flowchart TD
     A([Schedule Trigger]) --> B[Lead List<br/>Filter: Status = Active]
     B --> C[Source Scraping / API Query<br/>web scraping - news · direct API - regulatory]
@@ -61,6 +54,7 @@ flowchart TD
     class H stop;
     class J,L process;
     class M done;
+```
 
 **Mid-stage variation:** runs multiple evaluation agents (one per source) and consolidates them through a unified qualification filter before content generation, with raw data stored per source.
 
